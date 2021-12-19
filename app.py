@@ -11,5 +11,6 @@ def home():
     result = main(error=error, code=code) 
     return result
 
-if __name__ == '__main__':
-    app.run()
+def code_run():
+    if __name__ == '__main__':
+        app.run()
