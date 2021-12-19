@@ -6,8 +6,11 @@ CORS(app)
 from main import main
 @app.route("/run", methods=['POST', 'GET'])
 def home():
-    code = str(request.json["code"])
-    error = str(request.json["error"])
+    msg = request.json
+    if (msg == None):
+        return { "successful": [0] }
+    code = str(msg["code"])
+    error = str(msg["error"])
     result = main(error=error, code=code) 
     return result
 
