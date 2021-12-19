@@ -4,12 +4,17 @@ app = Flask(__name__)
 CORS(app)
 
 from main import main
-@app.route("/", methods=['POST', 'GET'])
+@app.route("/run", methods=['POST', 'GET'])
 def home():
     code = str(request.json["code"])
     error = str(request.json["error"])
     result = main(error=error, code=code) 
     return result
+
+@app.route("/", methods=['GET'])
+def home2():
+    
+    return "hello"
 
 
 if __name__ == '__main__':
