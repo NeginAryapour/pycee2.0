@@ -145,9 +145,9 @@ function send_text_to_server(error, code) {
 
                 str += json_data[i].body;
                 str += json_data[i].link_text;
-                str += '<button id="upvote-button-' + i.toString() + '"><img src=' + chrome.extension.getURL('images/upvote.png') + '></button>';
+                //str += '<button id="upvote-button-' + i.toString() + '"><img src=' + chrome.extension.getURL('images/upvote.png') + '></button>';
                 str += '     ';
-                str += '<button id="downvote-button-' + i.toString() + '"><img src=' + chrome.extension.getURL('images/downvote.png') + '></button>';
+                //str += '<button id="downvote-button-' + i.toString() + '"><img src=' + chrome.extension.getURL('images/downvote.png') + '></button>';
                 str += '<p style="font-size:18px;" id=score-' + i.toString() + '> Score: ' + json_data[i].score +  ' </p>';
 
                 solution_links.push(json_data[i].link);
