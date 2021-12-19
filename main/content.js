@@ -172,7 +172,7 @@ function send_text_to_server(error, code) {
         }
     }
     //var type = "find_solutions";
-    request.open("POST", 'http://127.0.0.1:5000/', true);
+    request.open("POST", 'http://neginaryapour.pythonanywhere.com/', true); //'http://127.0.0.1:5000/'
     var msg = { error, code };
     var msgjson = JSON.stringify(msg);
     request.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
